@@ -45,8 +45,8 @@ app.use('/api/v1/', api);
 
 var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
-var PORT = 3000;
-var SSLPORT = 3001;
+var PORT = process.env.PORT;
+var SSLPORT = process.env.PORT;
 
 httpServer.listen(PORT, function() {
     console.log('HTTP Server is running on: http://localhost:%s', PORT);
